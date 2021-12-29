@@ -11,3 +11,8 @@ export const Counter = atom({
   key: "ScheduleCounter",
   default: 0,
 });
+
+export const NextLevelList = atom({
+  key: "nextLevelList",
+  default: [],
+});
