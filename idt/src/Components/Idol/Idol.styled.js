@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 export const IdolContainer = styled.div`
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
   img {
     height: 100%;
   }
@@ -14,5 +15,8 @@ export const IdolContainer = styled.div`
     justify-content: center;
     color: white;
     text-shadow: 0px 0px 3px black;
+  }
+  .b {
+    width: 0px;
   }
 `;

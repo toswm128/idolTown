@@ -6,7 +6,7 @@ const Round = () => {
   const { level, counter } = useSchedule();
   return (
     <RoundContainer>
-      {2 ** level}강 {`${counter}/${2 ** level}`}
+      {2 ** level}강 {`${counter + 2}/${2 ** level}`}
     </RoundContainer>
   );
 };

@@ -3,6 +3,7 @@ import useSchedule from "../../Hook/useSchedule";
 import Idol from "../../Components/Idol/Idol";
 import { BattlePageContainer, Schedule } from "./BattlePage.styled";
 import Round from "../../Components/Round/Round";
+import { useNavigate } from "react-router-dom";
 
 const BattlePage = () => {
   const {
@@ -13,6 +14,8 @@ const BattlePage = () => {
     nextLevel,
   } = useSchedule();
 
+  const router = useNavigate();
+
   useEffect(() => {
     makeSchedule();
   }, []);
@@ -21,6 +24,12 @@ const BattlePage = () => {
       nextLevel();
     }
   }, [counter]);
+
+  useEffect(() => {
+    if (schedule.length == 1) {
+      router(`/:${schedule[0].ranking}`);
+    }
+  }, [schedule]);
 
   return (
     <BattlePageContainer>

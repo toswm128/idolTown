@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useSchedule from "../../Hook/useSchedule";
 import { IdolContainer } from "./Idol.styled";
 

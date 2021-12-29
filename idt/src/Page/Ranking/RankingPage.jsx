@@ -1,6 +1,6 @@
 import React from "react";
 
-const MainPage = () => {
+const RankingPage = () => {
   return (
     <div>
       <div>main</div>
@@ -8,4 +8,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default RankingPage;

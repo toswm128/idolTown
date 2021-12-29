@@ -1,7 +1,6 @@
 import { useRecoilState } from "recoil";
 import { Schedule, Level, Counter, NextLevelList } from "../State/Schedule";
 import idolList from "../config/idolLIst.json";
-import { useState } from "react";
 
 const useSchedule = () => {
   const [schedule, setSchedule] = useRecoilState(Schedule);
@@ -24,7 +23,7 @@ const useSchedule = () => {
       setLevel(level - 1);
       setSchedule(nextLevelList);
       setNextLevelList([]);
-    }
+    } else return false;
   };
 
   return {
