@@ -4,19 +4,20 @@ export const IdolContainer = styled.div`
   height: 100%;
   object-fit: cover;
   cursor: pointer;
+
   img {
     height: 100%;
   }
-  div {
+  .name {
     position: sticky;
-    bottom: 10%;
+    height: 20%;
+    bottom: 25px;
+    z-index: 9999;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     color: white;
     text-shadow: 0px 0px 3px black;
-  }
-  .b {
-    width: 0px;
+    align-items: flex-start;
   }
 `;

@@ -1,12 +1,16 @@
-import React, { useState } from "react";
-import useSchedule from "../../Hook/useSchedule";
+import React from "react";
 import { IdolContainer } from "./Idol.styled";
+import { motion } from "framer-motion";
 
 const Idol = ({ info, gRFTNB }) => {
   return (
-    <IdolContainer onClick={() => gRFTNB(info)}>
+    <IdolContainer
+      onClick={() => {
+        setTimeout(() => gRFTNB(info), 1000);
+      }}
+    >
       <img src={info.src} alt="" />
-      <div>{info.name}</div>
+      <div className="name">{info.name}</div>
     </IdolContainer>
   );
 };

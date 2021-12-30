@@ -9,4 +9,5 @@ export const RoundContainer = styled.div`
   font-size: 1.5rem;
   color: white;
   text-shadow: 0px 0px 3px black;
+  z-index: 99999;
 `;

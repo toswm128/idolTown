@@ -4,7 +4,7 @@ export const Schedule = atom({ key: "iDolSchedule", default: [] });
 
 export const Level = atom({
   key: "ScheduleLevel",
-  default: 7, //128강 기준
+  default: 2, //128강 기준
 });
 
 export const Counter = atom({
@@ -15,4 +15,9 @@ export const Counter = atom({
 export const NextLevelList = atom({
   key: "nextLevelList",
   default: [],
+});
+
+export const Winner = atom({
+  key: "winner",
+  default: "",
 });

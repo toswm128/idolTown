@@ -8,4 +8,7 @@ export const Schedule = styled.div`
   height: 100vh;
   align-items: center;
   justify-content: center;
+  div {
+    height: 100%;
+  }
 `;
