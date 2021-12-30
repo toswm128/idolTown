@@ -6,7 +6,8 @@ export const RoundContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
+  margin-top: 1%;
+  font-size: 2rem;
   color: white;
   text-shadow: 0px 0px 3px black;
   z-index: 99999;

@@ -8,7 +8,9 @@ export const Schedule = styled.div`
   height: 100vh;
   align-items: center;
   justify-content: center;
+  background-color: black;
   div {
     height: 100%;
   }
+  overflow-y: hidden;
 `;

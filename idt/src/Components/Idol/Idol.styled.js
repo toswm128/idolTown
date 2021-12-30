@@ -7,13 +7,14 @@ export const IdolContainer = styled.div`
 
   img {
     height: 100%;
+    max-width: 100%;
   }
   .name {
     position: sticky;
     height: 20%;
     bottom: 25px;
     z-index: 9999;
-    font-size: 1.5rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     color: white;

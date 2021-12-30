@@ -21,3 +21,8 @@ export const Winner = atom({
   key: "winner",
   default: "",
 });
+
+export const RankingList = atom({
+  key: "rankingList",
+  default: [],
+});

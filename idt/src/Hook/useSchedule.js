@@ -5,6 +5,7 @@ import {
   Counter,
   NextLevelList,
   Winner,
+  RankingList,
 } from "../State/Schedule";
 import idolList from "../config/idolLIst.json";
 import axios from "axios";
@@ -15,6 +16,7 @@ const useSchedule = () => {
   const [counter, setCount] = useRecoilState(Counter);
   const [nextLevelList, setNextLevelList] = useRecoilState(NextLevelList);
   const [winner, setWinner] = useRecoilState(Winner);
+  const [ranking, setRanking] = useRecoilState(RankingList);
 
   const makeSchedule = () => {
     setSchedule(idolList.sort(() => 0.5 - Math.random()).slice(0, 2 ** level));
@@ -34,18 +36,14 @@ const useSchedule = () => {
     } else return false;
   };
 
-  const winIdol = () => {
+  const winIdol = async () => {
     setWinner(schedule[0]);
-  };
-
-  const rankIdol = async () => {
-    const response = await axios
-      .patch(`http://172.16.6.159:8080/win`, winner.name)
-      .then(() => axios.get(`http://172.16.6.159:8080/rainking`))
+    const { data } = await axios
+      .post(`http://192.168.77.124:8080/win`, { who: schedule[0].name })
+      .then(() => axios.get(`http://192.168.77.124:8080/ranking`))
       .catch(err => console.log(err));
-    console.log(winner);
-    console.log(response);
-    return response;
+    setRanking(data);
+    return data;
   };
 
   return {
@@ -56,7 +54,8 @@ const useSchedule = () => {
     level,
     nextLevel,
     winIdol,
-    rankIdol,
+    winner,
+    ranking,
   };
 };
 

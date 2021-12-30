@@ -44,7 +44,7 @@ const BattlePage = () => {
         <Schedule>
           <motion.div
             animate={clickL ? "move" : clickR ? "run" : "none"}
-            variants={{ move: { x: "50%" }, run: { x: "-100%" } }}
+            variants={{ move: { x: "50%" }, run: { x: "-150%" } }}
             onClick={() => {
               setClickL(true);
               setTimeout(() => setClickL(false), 1000);
@@ -54,7 +54,7 @@ const BattlePage = () => {
           </motion.div>
           <motion.div
             animate={clickR ? "move" : clickL ? "run" : "none"}
-            variants={{ move: { x: "-50%" }, run: { x: "100%" } }}
+            variants={{ move: { x: "-50%" }, run: { x: "150%" } }}
             onClick={() => {
               setClickR(true);
               setTimeout(() => setClickR(false), 1000);
