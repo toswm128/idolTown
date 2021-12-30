@@ -15,6 +15,7 @@ export const RankingContainer = styled.div`
     flex-direction: column;
     img {
       margin-bottom: 10px;
+      max-width: 300px;
     }
     div {
       font-weight: bold;

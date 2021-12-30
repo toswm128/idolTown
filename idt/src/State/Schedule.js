@@ -4,7 +4,7 @@ export const Schedule = atom({ key: "iDolSchedule", default: [] });
 
 export const Level = atom({
   key: "ScheduleLevel",
-  default: 2, //128강 기준
+  default: 5, //128강 기준
 });
 
 export const Counter = atom({
